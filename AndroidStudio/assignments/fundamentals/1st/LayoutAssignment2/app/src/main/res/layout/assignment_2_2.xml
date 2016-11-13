@@ -1,9 +1,70 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity" >
 
+    <FrameLayout
+        android:id="@+id/Frame1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#eeeeee"
+        android:layout_margin="4dp"
+        android:padding="4dp" >
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ドロイド君の画像ファイル"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888888"
+                android:text="res/ic_launcher.png"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ImageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#ffffff"
+            android:src="@drawable/ic_launcher" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/Frame2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Frame1"
+        android:background="#eeeeee"
+        android:layout_margin="4dp"
+        android:padding="4dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#888888"
+            android:text="xhdpi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="#666666"
+            android:text="12,516 bytes"/>
+
+    </FrameLayout>
+
+</FrameLayout>
